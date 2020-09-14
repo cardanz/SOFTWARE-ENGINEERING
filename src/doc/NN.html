@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module NN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>NN</strong></big></big> (version 1.0)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cstela%5Cdocuments%5Cuniversit%C3%A0%5Canno%20accademico%202019-20%5Csoftware%20engeering%5Cprogettorina%5Csrc%5Cnn.py">c:\users\stela\documents\università\anno accademico 2019-20\software engeering\progettorina\src\nn.py</a></font></td></tr></table>
+    <p><tt>Classe&nbsp;di&nbsp;una&nbsp;Rete&nbsp;Neurale</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="tensorflow.html">tensorflow</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="NN.html#NeuralNetwork">NeuralNetwork</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NeuralNetwork">class <strong>NeuralNetwork</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Oggetto&nbsp;Rete&nbsp;Neurale&nbsp;(NN)<br>
+&nbsp;<br>
+Attributi<br>
+----------<br>
+__numeroLayer&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;hidden-layer&nbsp;<br>
+__numeroNodi&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;nodi&nbsp;per&nbsp;layer<br>
+__percentualeTs:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentuale&nbsp;di&nbsp;suddivisione&nbsp;del&nbsp;dataset&nbsp;in&nbsp;Training-Set&nbsp;e&nbsp;Validation-Set<br>
+__funzione:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Funzione&nbsp;di&nbsp;decisione&nbsp;scelta<br>
+__modelName:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nome&nbsp;della&nbsp;Rete&nbsp;Neurale<br>
+__datasetPath:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;file&nbsp;utilizzato&nbsp;come&nbsp;dataset<br>
+__fileDir:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;in&nbsp;cui&nbsp;è&nbsp;presente&nbsp;il&nbsp;file&nbsp;python<br>
+__pathSave:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;in&nbsp;cui&nbsp;dovrà&nbsp;esser&nbsp;salvata&nbsp;la&nbsp;Rete&nbsp;Neurale<br>
+__train_dataset_fp:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;dataset&nbsp;di&nbsp;training<br>
+__test_dataset_fp:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;dataset&nbsp;di&nbsp;test<br>
+__dimTs:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;righe&nbsp;del&nbsp;dataset&nbsp;dedicate&nbsp;al&nbsp;training-dataset<br>
+__dimVs:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;righe&nbsp;del&nbsp;dataset&nbsp;dedicate&nbsp;al&nbsp;validation-dataset&nbsp;(test-dataset)<br>
+__train_dataset:&nbsp;tf.Tensor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dataset&nbsp;utilizzato&nbsp;per&nbsp;il&nbsp;training<br>
+__test_dataset:&nbsp;tf.Tensot<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dataset&nbsp;utilizzato&nbsp;er&nbsp;il&nbsp;testing<br>
+__features:&nbsp;tf.Tensor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dati&nbsp;riferiti&nbsp;alle&nbsp;caratteristiche&nbsp;del&nbsp;dataset<br>
+__labels:&nbsp;tf.Tensor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dati&nbsp;riferiti&nbsp;alla&nbsp;tipologia<br>
+__model:&nbsp;tf.keras.Sequential<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Modello&nbsp;di&nbsp;Rete&nbsp;Neurale<br>
+train_loss_results:&nbsp;tf.Tensor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Andamento&nbsp;della&nbsp;Loss&nbsp;nel&nbsp;training<br>
+train_accuracy_results:&nbsp;tf.Tensor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Andamento&nbsp;della&nbsp;Accuracy&nbsp;nel&nbsp;training<br>
+test_accuracy:&nbsp;tf.keras.metrics.Accuracy()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Accuracy&nbsp;del&nbsp;testing<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NeuralNetwork-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Inizializzazione&nbsp;degli&nbsp;attributi&nbsp;della&nbsp;classe</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>datasetPath</strong></dt>
+</dl>
+<dl><dt><strong>dimTs</strong></dt>
+</dl>
+<dl><dt><strong>dimVs</strong></dt>
+</dl>
+<dl><dt><strong>features</strong></dt>
+</dl>
+<dl><dt><strong>fileDir</strong></dt>
+</dl>
+<dl><dt><strong>funzione</strong></dt>
+</dl>
+<dl><dt><strong>labels</strong></dt>
+</dl>
+<dl><dt><strong>model</strong></dt>
+</dl>
+<dl><dt><strong>modelName</strong></dt>
+</dl>
+<dl><dt><strong>numeroLayer</strong></dt>
+</dl>
+<dl><dt><strong>numeroNodi</strong></dt>
+</dl>
+<dl><dt><strong>pathSave</strong></dt>
+</dl>
+<dl><dt><strong>percentualeTs</strong></dt>
+</dl>
+<dl><dt><strong>test_dataset</strong></dt>
+</dl>
+<dl><dt><strong>test_dataset_fp</strong></dt>
+</dl>
+<dl><dt><strong>train_dataset</strong></dt>
+</dl>
+<dl><dt><strong>train_dataset_fp</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__email__</strong> = 'ste.lavaggi@gmail.com matteo.cardano@gmail.com'<br>
+<strong>__maintainer__</strong> = 'Matteo Cardano, Stefano Lavaggi'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Matteo&nbsp;Cardano,Stefano&nbsp;Lavaggi</td></tr></table>
+</body></html>

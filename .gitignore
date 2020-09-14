@@ -1,0 +1,12 @@
+
+.mypy_cache/
+
+.vscode/
+
+src/__pycache__/
+
+test/__pycache__/
+
+src/img
+
+test/test_NNcreator.py

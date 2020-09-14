@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module configurazione</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>configurazione</strong></big></big> (version 1.0)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cstela%5Cdocuments%5Cuniversit%C3%A0%5Canno%20accademico%202019-20%5Csoftware%20engeering%5Cprogettorina%5Csrc%5Cconfigurazione.py">c:\users\stela\documents\università\anno accademico 2019-20\software engeering\progettorina\src\configurazione.py</a></font></td></tr></table>
+    <p><tt>Interfaccia&nbsp;grafica&nbsp;di&nbsp;<a href="#Configurazione">Configurazione</a>&nbsp;di&nbsp;una&nbsp;Rete&nbsp;Neurale</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PyQt5.QtCore.html">PyQt5.QtCore</a><br>
+<a href="PyQt5.QtGui.html">PyQt5.QtGui</a><br>
+</td><td width="25%" valign=top><a href="csv.html">csv</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>(<a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a>, <a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="configurazione.html#Configurazione">Configurazione</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Configurazione">class <strong>Configurazione</strong></a>(<a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Oggetto&nbsp;utilizzato&nbsp;per&nbsp;definire&nbsp;una&nbsp;interfaccia&nbsp;di&nbsp;<a href="#Configurazione">Configurazione</a><br>
+per&nbsp;una&nbsp;Rete&nbsp;Neurale&nbsp;(NN)<br>
+&nbsp;<br>
+Attributi:<br>
+----------<br>
+_myNNcreator&nbsp;:&nbsp;NNcreator.NNcreators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Oggetto&nbsp;per&nbsp;chiamare&nbsp;le&nbsp;funzioni&nbsp;collegate&nbsp;alla&nbsp;Rete&nbsp;Neurale<br>
+__sequenza:&nbsp;Boolean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Per&nbsp;controllare&nbsp;che&nbsp;sia&nbsp;stato&nbsp;effettuato&nbsp;il&nbsp;click&nbsp;sul&nbsp;tasto&nbsp;'Salva'<br>
+__convalida:&nbsp;Boolean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Per&nbsp;controllare&nbsp;che&nbsp;sia&nbsp;stato&nbsp;effettuato&nbsp;il&nbsp;click&nbsp;sul&nbsp;tasto&nbsp;'Convalida'<br>
+__dataset:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Variabile&nbsp;contenente&nbsp;il&nbsp;percorso&nbsp;del&nbsp;dataset<br>
+__percentuale:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Variabile&nbsp;contenente&nbsp;la&nbsp;percentuale&nbsp;di&nbsp;suddivisione&nbsp;del&nbsp;dataset&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;training-set&nbsp;e&nbsp;test-set<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="configurazione.html#Configurazione">Configurazione</a></dd>
+<dd><a href="PyQt5.QtWidgets.html#QWidget">PyQt5.QtWidgets.QWidget</a></dd>
+<dd><a href="PyQt5.QtCore.html#QObject">PyQt5.QtCore.QObject</a></dd>
+<dd><a href="PyQt5.sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt5.QtGui.html#QPaintDevice">PyQt5.QtGui.QPaintDevice</a></dd>
+<dd><a href="PyQt5.sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Configurazione-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-acquisizioneParametri"><strong>acquisizioneParametri</strong></a>(self)</dt><dd><tt>Acquisisce&nbsp;i&nbsp;parametri&nbsp;inseriti&nbsp;nei&nbsp;vari&nbsp;campi&nbsp;presenti&nbsp;nell'interfaccia.<br>
+Vengono&nbsp;effettuati&nbsp;anche&nbsp;tutti&nbsp;i&nbsp;controlli&nbsp;richiesti&nbsp;per&nbsp;ottenere&nbsp;dei&nbsp;dati&nbsp;validi&nbsp;per&nbsp;<br>
+la&nbsp;successiva&nbsp;creazione&nbsp;della&nbsp;Rete&nbsp;Neurale</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-caricaDataSet"><strong>caricaDataSet</strong></a>(self)</dt><dd><tt>Apre&nbsp;la&nbsp;schermata&nbsp;per&nbsp;effettuare&nbsp;il&nbsp;caricamento&nbsp;del&nbsp;dataset</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-caricaNN"><strong>caricaNN</strong></a>(self, percorso)</dt><dd><tt>Setta&nbsp;il&nbsp;modello&nbsp;scelto&nbsp;dalla&nbsp;schermata&nbsp;di&nbsp;caricamento&nbsp;<br>
+aperta&nbsp;in&nbsp;precedenza<br>
+&nbsp;<br>
+Parametri:<br>
+---------<br>
+percorso:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percorso&nbsp;della&nbsp;Rete&nbsp;Neurale&nbsp;da&nbsp;caricare</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-generaNN"><strong>generaNN</strong></a>(self, layer, nodi, percentuale, funzione, rete, dataSet)</dt><dd><tt>Genera&nbsp;una&nbsp;Rete&nbsp;Neurale&nbsp;utilizzando&nbsp;i&nbsp;parametri&nbsp;inseriti&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parametri<br>
+&nbsp;&nbsp;&nbsp;&nbsp;----------<br>
+&nbsp;&nbsp;&nbsp;&nbsp;layer&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;hidden-layer&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nodi&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;nodi&nbsp;per&nbsp;layer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentuale:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentuale&nbsp;di&nbsp;suddivisione&nbsp;del&nbsp;dataset&nbsp;in&nbsp;Training-Set&nbsp;e&nbsp;Validation-Set<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rete:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nome&nbsp;della&nbsp;Rete&nbsp;Neurale<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataSet:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;file&nbsp;utilizzato&nbsp;come&nbsp;dataset</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-mostraPercentualeTs"><strong>mostraPercentualeTs</strong></a>(self)</dt><dd><tt>Metodo&nbsp;che&nbsp;mostra&nbsp;la&nbsp;percentuale(%)&nbsp;scelta&nbsp;per&nbsp;la&nbsp;partizione<br>
+tra&nbsp;training-dataset&nbsp;e&nbsp;test-dataset&nbsp;in&nbsp;tempo&nbsp;reale</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-openCaricaNN"><strong>openCaricaNN</strong></a>(self)</dt><dd><tt>Funzione&nbsp;riferita&nbsp;al&nbsp;pulsante&nbsp;'Carica'&nbsp;presente&nbsp;nell'interfaccia.<br>
+Permette&nbsp;il&nbsp;caricamento&nbsp;di&nbsp;una&nbsp;Rete&nbsp;Neurale&nbsp;già&nbsp;configurata,&nbsp;tramite<br>
+una&nbsp;finestra</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-openVisualizzazione"><strong>openVisualizzazione</strong></a>(self)</dt><dd><tt>Apertura&nbsp;della&nbsp;schermata&nbsp;per&nbsp;la&nbsp;visualizzazione&nbsp;dei&nbsp;risultati&nbsp;del&nbsp;training</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-salvaNN"><strong>salvaNN</strong></a>(self)</dt><dd><tt>Funzione&nbsp;relativa&nbsp;al&nbsp;tasto&nbsp;'Salva'&nbsp;presente&nbsp;nell'interfaccia,&nbsp;<br>
+permettendo&nbsp;il&nbsp;salvataggio&nbsp;della&nbsp;Rete&nbsp;Neurale&nbsp;convalidata&nbsp;in&nbsp;precedenza.</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-setDataset"><strong>setDataset</strong></a>(self, dataset)</dt><dd><tt>Setter&nbsp;per&nbsp;il&nbsp;dataset</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-setPercentualeTs"><strong>setPercentualeTs</strong></a>(self, percentualeTs)</dt><dd><tt>Setter&nbsp;per&nbsp;la&nbsp;percentuale&nbsp;di&nbsp;suddivisione&nbsp;dei&nbsp;dataset</tt></dd></dl>
+
+<dl><dt><a name="Configurazione-tsVs"><strong>tsVs</strong></a>(self)</dt><dd><tt>Salva&nbsp;la&nbsp;percentuale&nbsp;inserita&nbsp;nello&nbsp;slider&nbsp;per&nbsp;la&nbsp;suddivisione&nbsp;del&nbsp;dataset</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__email__</strong> = 'ste.lavaggi@gmail.com matteo.cardano@gmail.com'<br>
+<strong>__maintainer__</strong> = 'Matteo Cardano, Stefano Lavaggi'</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Matteo&nbsp;Cardano,Stefano&nbsp;Lavaggi</td></tr></table>
+</body></html>

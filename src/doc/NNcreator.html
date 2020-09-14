@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module NNcreator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>NNcreator</strong></big></big> (version 1.0)</font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cstela%5Cdocuments%5Cuniversit%C3%A0%5Canno%20accademico%202019-20%5Csoftware%20engeering%5Cprogettorina%5Csrc%5Cnncreator.py">c:\users\stela\documents\università\anno accademico 2019-20\software engeering\progettorina\src\nncreator.py</a></font></td></tr></table>
+    <p><tt>Creazione&nbsp;di&nbsp;una&nbsp;Rete&nbsp;Neurale</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="tensorflow.html">tensorflow</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="NNcreator.html#NNcreators">NNcreators</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NNcreators">class <strong>NNcreators</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#NNcreators">NNcreators</a>(numeroLayer,&nbsp;numeroNodi,&nbsp;percentualeTs,&nbsp;funzione,&nbsp;ModelName,&nbsp;datasetPath)<br>
+&nbsp;<br>
+Classe&nbsp;di&nbsp;operazioni&nbsp;di&nbsp;Rete&nbsp;Neurale&nbsp;<br>
+&nbsp;<br>
+Attributi<br>
+---------<br>
+reteNeurale:&nbsp;NeuralNetwork<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Oggetto&nbsp;Rete&nbsp;Neurale<br>
+column_names:&nbsp;string[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nomi&nbsp;di&nbsp;tutte&nbsp;le&nbsp;colonne&nbsp;del&nbsp;dataset<br>
+feature_names:&nbsp;string[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nomi&nbsp;delle&nbsp;colonne&nbsp;riferite&nbsp;alla&nbsp;caratteristiche<br>
+label_name:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nome&nbsp;della&nbsp;colonna&nbsp;riferito&nbsp;alla&nbsp;tipologia<br>
+class_names:&nbsp;string[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tipologie&nbsp;di&nbsp;errori<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NNcreators-__init__"><strong>__init__</strong></a>(self, numeroLayer, numeroNodi, percentualeTs, funzione, ModelName, datasetPath)</dt><dd><tt>Inizializzazione&nbsp;degli&nbsp;attributi&nbsp;della&nbsp;reteNeurrale<br>
+&nbsp;<br>
+Parametri<br>
+----------&nbsp;<br>
+numeroLayer:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;hidden-layer&nbsp;della&nbsp;Rete&nbsp;Neurale<br>
+numeroNodi:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Numero&nbsp;di&nbsp;nodi&nbsp;per&nbsp;layer<br>
+percentualeTs:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentuale&nbsp;del&nbsp;dataset&nbsp;dedicata&nbsp;al&nbsp;training<br>
+funzione:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Funzione&nbsp;di&nbsp;decisione<br>
+ModelName:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nome&nbsp;della&nbsp;rete<br>
+datasetPath:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;dataset</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-generazioneDatasets"><strong>generazioneDatasets</strong></a>(self)</dt><dd><tt>Generazione&nbsp;dei&nbsp;dataset&nbsp;che&nbsp;vengono&nbsp;utilizzati&nbsp;per&nbsp;training&nbsp;e&nbsp;testing&nbsp;della&nbsp;rete</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-generazioneFileDatasets"><strong>generazioneFileDatasets</strong></a>(self)</dt><dd><tt>Genera&nbsp;i&nbsp;due&nbsp;file&nbsp;di&nbsp;dataset:<br>
+-&nbsp;uno&nbsp;dedicato&nbsp;per&nbsp;il&nbsp;training&nbsp;della&nbsp;rete<br>
+-&nbsp;l'&nbsp;altro&nbsp;dedicato&nbsp;al&nbsp;testing&nbsp;della&nbsp;rete</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-generazioneModello"><strong>generazioneModello</strong></a>(self)</dt><dd><tt>Generazione&nbsp;della&nbsp;Rete&nbsp;Neurale&nbsp;con&nbsp;le&nbsp;caratteristiche&nbsp;scelte</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-previsione"><strong>previsione</strong></a>(self, predictionPath)</dt><dd><tt>Effettua&nbsp;la&nbsp;prediction&nbsp;sul&nbsp;file&nbsp;scelto&nbsp;<br>
+&nbsp;<br>
+Parametri<br>
+---------<br>
+predictionPath:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;del&nbsp;file&nbsp;contenente&nbsp;il&nbsp;dataset&nbsp;su&nbsp;cui&nbsp;si&nbsp;deve<br>
+&nbsp;&nbsp;&nbsp;&nbsp;effettuare&nbsp;la&nbsp;'prediction'<br>
+&nbsp;<br>
+&nbsp;<br>
+Ritorna<br>
+-------<br>
+ris:&nbsp;string[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Risultati&nbsp;della&nbsp;'prediction'&nbsp;nella&nbsp;forma:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"Riga:&nbsp;"&nbsp;+&nbsp;i&nbsp;+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"Previsione:&nbsp;"&nbsp;+&nbsp;nomeFiorePredetto&nbsp;+&nbsp;percentualediAccuratezza</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-risultati"><strong>risultati</strong></a>(self)</dt><dd><tt>Salvataggio&nbsp;della&nbsp;Rete&nbsp;Neurale&nbsp;generata&nbsp;<br>
+&nbsp;<br>
+Ritorna<br>
+-------<br>
+testAccuracyResult:&nbsp;string[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentuale&nbsp;di&nbsp;'Accuracy'&nbsp;del&nbsp;test&nbsp;effettuato<br>
+trainAccuracyResult:&nbsp;strign[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percentuale&nbsp;di&nbsp;'Accuracy&nbsp;del&nbsp;training&nbsp;effettuato</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-salvataggioRisultati"><strong>salvataggioRisultati</strong></a>(self)</dt><dd><tt>Salva&nbsp;l'&nbsp;andamento&nbsp;della&nbsp;Loss&nbsp;e&nbsp;della&nbsp;Accuracy&nbsp;in&nbsp;una&nbsp;immagine&nbsp;(.png)</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-setModello"><strong>setModello</strong></a>(self, percorso)</dt><dd><tt>Caricamento&nbsp;di&nbsp;una&nbsp;Rete&nbsp;Neurale&nbsp;già&nbsp;configurata<br>
+&nbsp;<br>
+Parametri<br>
+---------<br>
+percorso:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Percorso&nbsp;in&nbsp;cui&nbsp;si&nbsp;trova&nbsp;la&nbsp;Rete&nbsp;Neurale&nbsp;scelta</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-switch_fun"><strong>switch_fun</strong></a>(self, argument)</dt><dd><tt>Funzione&nbsp;di&nbsp;switch&nbsp;per&nbsp;le&nbsp;varie&nbsp;funzioni&nbsp;possibili&nbsp;<br>
+&nbsp;<br>
+Parametri<br>
+---------<br>
+argument:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Stringa&nbsp;contenente&nbsp;il&nbsp;nome&nbsp;della&nbsp;funzione&nbsp;di&nbsp;decisione&nbsp;scelta<br>
+&nbsp;<br>
+&nbsp;<br>
+Ritorna<br>
+-------<br>
+switcher.get(argument):&nbsp;tf.nn.*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Funzione&nbsp;di&nbsp;decisione&nbsp;che&nbsp;viene&nbsp;utilizzata&nbsp;nella&nbsp;Rete&nbsp;Neurale</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-testing"><strong>testing</strong></a>(self)</dt><dd><tt>Effettua&nbsp;il&nbsp;testing&nbsp;della&nbsp;Rete&nbsp;Neurale</tt></dd></dl>
+
+<dl><dt><a name="NNcreators-trainingModello"><strong>trainingModello</strong></a>(self)</dt><dd><tt>Training&nbsp;della&nbsp;Rete&nbsp;Neurale</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>__email__</strong> = 'ste.lavaggi@gmail.com matteo.cardano@gmail.com'<br>
+<strong>__maintainer__</strong> = 'Matteo Cardano, Stefano Lavaggi'<br>
+<strong>__warningregistry__</strong> = {'version': 12}</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#7799ee">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Author</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#7799ee"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Matteo&nbsp;Cardano,Stefano&nbsp;Lavaggi</td></tr></table>
+</body></html>
